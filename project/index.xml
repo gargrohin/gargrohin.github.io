@@ -6,10 +6,19 @@
     <description>Recent content in Projects on Rohin Garg</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Nov 2019 07:19:00 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 17 Nov 2019 11:11:43 +0530</lastBuildDate>
     
 	    <atom:link href="https://gargrohin.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Edge Caching</title>
+      <link>https://gargrohin.github.io/project/edge-caching/</link>
+      <pubDate>Sun, 17 Nov 2019 11:11:43 +0530</pubDate>
+      
+      <guid>https://gargrohin.github.io/project/edge-caching/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Object Tracking</title>
