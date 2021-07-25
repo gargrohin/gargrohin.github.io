@@ -1,2 +1,0 @@
-# gargrohin.github.io
-Academic
