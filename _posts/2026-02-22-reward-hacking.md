@@ -29,7 +29,7 @@ I implemented Karpathy's nanoGPT because I wanted to try doing it myself. I fine
 
 **Reward**: A fine-tuned DistilBERT sentiment classifier scores the generated text. +1 if it matches the target sentiment, -1 otherwise. Sparse: assigned once based on the full output.
 
-**Baseline**: REINFORCE with an EMA baseline (decay=0.99) for variance reduction. It subtracts the running mean reward so the policy gradient is based on whether a sample was better or worse than average.
+**Baseline**: REINFORCE with an EMA baseline (`decay=0.99`) for variance reduction. It subtracts the running mean reward so the policy gradient is based on whether a sample was better or worse than average.
 
 ### Result
 
