@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Reward Hacking, or: How I designed bad reward functions and what I learned trying to fix them"
+title: "Reward Hacking, or: How I broke two RL systems with bad rewards"
 date: 2026-02-22
 ---
 
