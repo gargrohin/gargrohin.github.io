@@ -1,10 +1,8 @@
 ---
 layout: post
-title: "The Reward Design Trap: Lessons from Breaking Two RL Systems"
+title: "Reward Hacking, or: How I designed bad reward functions and what I learned trying to fix them"
 date: 2026-02-22
 ---
-
-*Reward Hacking, or: How I designed bad reward functions and what I learned trying to fix them.*
 
 ![](/assets/images/hook_hovering_213.gif)
 
