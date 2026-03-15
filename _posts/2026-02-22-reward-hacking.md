@@ -43,8 +43,8 @@ Generated: "of look nice nice nice nice nice great thanks !"
 
 ```
 Step 2000+:
-Positive target -> "really good! really good! great! amazing!"
-Negative target -> "poor. really poor. poor. poor."
+Positive target → "really good! really good! great! amazing!"
+Negative target → "poor. really poor. poor. poor."
 ```
 
 **Sentiment accuracy: 100%.** The policy found that repeating sentiment-loaded tokens maximizes the classifier score. The output doesn't mean anything, but it maximizes the reward.
@@ -115,8 +115,8 @@ reward = reaching + grasp + lift + success
 
 | Behavior | Total Reward |
 |----------|-------------|
-| Grasp and hold (500 steps) | 0.5 x 500 = **250** |
-| Succeed at step 100 | ~0.5 x 100 + 5.0 = **~55** |
+| Grasp and hold (500 steps) | 0.5 × 500 = **250** |
+| Succeed at step 100 | ~0.5 × 100 + 5.0 = **~55** |
 
 I fixed the hovering problem by reducing the reaching reward, but introduced the same trap in a different form. The continuous grasp reward accumulates over the full episode and dwarfs the one-time success bonus.
 
@@ -177,7 +177,7 @@ The ordering is finally right. The agent occasionally completes the task, but th
 
 Contact-rich manipulation is hard to learn from scratch with model-free RL and hand-crafted rewards alone.
 
-This is why most successful robotics systems use imitation learning to bootstrap a policy from demonstrations, then layer RL on top. Physical Intelligence's [pi*0.6](https://www.pi.website/blog/pistar06) is a recent example: they train a VLA model on demonstrations first, then use RL with real-world experience and expert corrections to more than double success rates on tasks like espresso making and box assembly. The RL doesn't start from scratch. It refines a policy that already knows how to move.
+This is why most successful robotics systems use imitation learning to bootstrap a policy from demonstrations, then layer RL on top. Physical Intelligence's [π*0.6](https://www.pi.website/blog/pistar06) is a recent example: they train a VLA model on demonstrations first, then use RL with real-world experience and expert corrections to more than double success rates on tasks like espresso making and box assembly. The RL doesn't start from scratch. It refines a policy that already knows how to move.
 
 ---
 
@@ -187,7 +187,7 @@ In RL, the policy maximizes cumulative reward. It has no concept of the task bey
 
 ### 1. Cumulative Rewards Dominate Terminal Rewards
 
-A small per-step reward over many steps beats a large one-time bonus. If `0.5/step x 500 steps = 250` and your success bonus is 100, the agent is better off never succeeding. Always check the arithmetic before training.
+A small per-step reward over many steps beats a large one-time bonus. If `0.5/step × 500 steps = 250` and your success bonus is 100, the agent is better off never succeeding. Always check the arithmetic before training.
 
 ### 2. Reward Gradient Shape Matters
 
@@ -205,9 +205,9 @@ Both systems showed improving reward curves while developing useless behaviors. 
 
 The robot is not yet reliably lifting the cube. Each fix has revealed a new issue:
 
-- Rebalanced rewards -> holding exploit
-- Time penalty -> exploration collapse
-- Softer gradients -> -9 mean reward, still unsolved
+- Rebalanced rewards → holding exploit
+- Time penalty → exploration collapse
+- Softer gradients → -9 mean reward, still unsolved
 
 The language model works with the KL penalty, but finding the right $\beta$ required trial and error. Too low and it reward-hacks; too high and it ignores the task.
 
