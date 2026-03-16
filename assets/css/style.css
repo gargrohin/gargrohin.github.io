@@ -55,6 +55,21 @@ img {
   border-radius: 4px;
 }
 
+figure {
+  margin: 1.5rem 0;
+}
+
+figure img {
+  margin: 0 auto;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+}
+
 code {
   font-family: "SF Mono", "Fira Code", monospace;
   font-size: 0.9em;
