@@ -1,0 +1,34 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
+<header class="masthead">
+  <h1>Projects</h1>
+  <p class="intro">
+    Things I've built. More on
+    <a href="https://github.com/{{ site.github }}">GitHub</a>.
+  </p>
+</header>
+
+<ul class="project-list">
+  {% for p in site.data.projects %}
+  <li class="project">
+    <div class="project-head">
+      <h2 class="project-name">{{ p.name }}</h2>
+      {% if p.year %}<span class="project-year">{{ p.year }}</span>{% endif %}
+    </div>
+    <p class="project-desc">{{ p.description }}</p>
+    {% if p.tags %}
+    <p class="project-tags">
+      {% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+    </p>
+    {% endif %}
+    <p class="project-links">
+      {% if p.repo %}<a href="{{ p.repo }}">Code</a>{% endif %}
+      {% if p.link %}<a href="{{ p.link | relative_url }}">{{ p.link_label | default: "Link" }}</a>{% endif %}
+    </p>
+  </li>
+  {% endfor %}
+</ul>

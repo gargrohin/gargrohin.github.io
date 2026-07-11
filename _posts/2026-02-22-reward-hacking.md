@@ -10,6 +10,9 @@ This robot maximizes its reward function. It has never once completed the task.
 
 This post covers two experiments where I designed rewards that seemed reasonable, trained models on them, and watched them optimize for exactly the wrong thing. One in discrete text generation with REINFORCE, and one in continuous robotic control with PPO. I saw similar observations in both.
 
+*Code: text generation in [gargrohin/reinforce](https://github.com/gargrohin/reinforce), robotics in [gargrohin/robotics-rl](https://github.com/gargrohin/robotics-rl).*
+
+
 ## Contents
 
 - [Experiment 1: Sentiment-Controlled Text Generation](#experiment-1-sentiment-controlled-text-generation)
@@ -25,7 +28,7 @@ This post covers two experiments where I designed rewards that seemed reasonable
 
 **Task**: Fine-tune GPT-2 with REINFORCE to generate text matching a target sentiment (positive or negative).
 
-I implemented Karpathy's nanoGPT because I wanted to try doing it myself. I fine-tuned all parameters of the model, which in retrospect gave the optimizer too many degrees of freedom to reshape the output distribution.
+I implemented Karpathy's nanoGPT because I wanted to try doing it myself ([code](https://github.com/gargrohin/reinforce)). I fine-tuned all parameters of the model, which in retrospect gave the optimizer too many degrees of freedom to reshape the output distribution.
 
 **Reward**: A fine-tuned DistilBERT sentiment classifier scores the generated text. +1 if it matches the target sentiment, -1 otherwise. Sparse: assigned once based on the full output.
 
@@ -88,7 +91,7 @@ In this case, constraining the optimization was necessary because I didn't want 
 
 I love robotics. I don't know exactly why but there's something about enabling an inorganic object to understand me and the world, and making it act **autonomously**. It's hard enough putting this objective into words and math, let alone actually implement it.
 
-So to keep things simple, I started with [Robosuite](https://robosuite.ai/), a robotics benchmark built on MuJoCo physics. It provides standard manipulation tasks with consistent APIs, so I could focus on reward design and RL training instead of environment plumbing.
+So to keep things simple, I started with [Robosuite](https://robosuite.ai/), a robotics benchmark built on MuJoCo physics ([code](https://github.com/gargrohin/robotics-rl)). It provides standard manipulation tasks with consistent APIs, so I could focus on reward design and RL training instead of environment plumbing.
 
 **Task**: A 7-DOF Panda robot arm must pick up a cube and lift it 4cm above the table. The policy sees joint positions, gripper state, and object positions as a flat vector, and outputs continuous joint velocity targets plus a gripper command.
 
@@ -230,7 +233,7 @@ Possible directions:
 
 ## Resources
 
-- [Reward visualization notebook](notebooks/reward_visualization.ipynb)
+- [Reward visualization notebook](https://github.com/gargrohin/robotics-rl/blob/main/notebooks/reward_visualization.ipynb)
 - [Robosuite Lift environment](https://robosuite.ai/)
 - [InstructGPT paper (Ouyang et al., 2022)](https://arxiv.org/abs/2203.02155), KL penalty for RLHF at scale
 - [Specification Gaming examples (DeepMind)](https://deepmindsafetyresearch.medium.com/specification-gaming-the-flip-side-of-ai-ingenuity-c85bdb0deeb4)

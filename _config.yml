@@ -3,6 +3,13 @@ description: ML and robotics notes
 url: "https://gargrohin.github.io"
 baseurl: ""
 
+# Social links — fill in or leave blank to hide them in the footer
+github: gargrohin
+email: ""
+linkedin: "https://www.linkedin.com/in/rohingarg1/"
+twitter: ""    # handle without the @
+scholar: "https://scholar.google.com/citations?user=3M6UepsAAAAJ&hl=en"
+
 markdown: kramdown
 highlighter: rouge
 kramdown:

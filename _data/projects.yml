@@ -1,0 +1,30 @@
+# Add a project by copying a block below. Fields:
+#   name        (required): project title
+#   description (required): one or two sentences
+#   repo        (optional): GitHub URL
+#   link        (optional): demo / paper / post URL
+#   link_label  (optional): text for `link` (defaults to "Link")
+#   year        (optional): shown on the right
+#   tags        (optional): list of short labels
+
+- name: "robotics-rl"
+  description: >
+    DIY robotics training experiments from scratch. PPO on a Robosuite Panda
+    arm, with reward shaping and a notebook for visualizing the reward
+    landscape. See the reward-hacking writeup for what broke and why.
+  repo: "https://github.com/gargrohin/robotics-rl"
+  link: "/2026/02/22/reward-hacking.html"
+  link_label: "Read the post"
+  year: 2026
+  tags: [RL, robotics, PPO]
+
+- name: "reinforce"
+  description: >
+    REINFORCE from scratch fine-tuning a nanoGPT-style model for
+    sentiment-controlled text generation, with a KL penalty to keep it from
+    reward-hacking the sentiment classifier.
+  repo: "https://github.com/gargrohin/reinforce"
+  link: "/2026/02/22/reward-hacking.html"
+  link_label: "Read the post"
+  year: 2026
+  tags: [RL, LLM, REINFORCE]

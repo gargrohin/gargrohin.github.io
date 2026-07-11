@@ -3,15 +3,23 @@ layout: default
 title: Home
 ---
 
-<h1>{{ site.title }}</h1>
-<p>{{ site.description }}</p>
+<header class="masthead">
+  <h1>{{ site.title }}</h1>
+  <p class="tagline">{{ site.description }}</p>
+  <!-- Intro line: edit this to say who you are in a sentence. -->
+  <p class="intro">
+    I work on machine learning and robotics. Here I write up experiments and
+    notes as I figure things out. Code is on
+    <a href="https://github.com/{{ site.github }}">GitHub</a>.
+  </p>
+</header>
 
+<h2 class="section-heading">Writing</h2>
 <ul class="post-list">
   {% for post in site.posts %}
   <li>
-    <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-    <br>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
   </li>
   {% endfor %}
 </ul>
