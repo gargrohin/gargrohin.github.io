@@ -26,3 +26,4 @@ permalink: /:year/:month/:day/:title.html
 exclude:
   - Gemfile.lock
   - README.md
+  - CLAUDE.md
