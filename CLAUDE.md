@@ -8,6 +8,22 @@ Rohin's personal site: a minimal **Jekyll** blog hosted on **GitHub Pages** at
 `https://gargrohin.github.io`. It is a GitHub Pages *user site*, so the live
 site deploys from the **`master`** branch. Pushing to `master` publishes.
 
+## Design references
+
+The site's look is modeled on a few minimal personal blogs. Use these when
+adjusting layout, typography, or spacing:
+
+- **evjang.com** — primary style inspiration (also a Jekyll + GitHub Pages
+  site). Referenced by URL; not mirrored locally.
+- **rajan.sh** — style reference. Local mirror downloaded for offline reference.
+- **ericyuegu.com** — style reference. Local mirror downloaded for offline
+  reference.
+
+The two local mirrors live **outside this repo** at `../downloaded_blogs/`
+(i.e. `blogsite/downloaded_blogs/{rajan.sh,ericyuegu.com}`), so they are never
+committed or published. The original build plan and agent prompt also sit in
+the parent `blogsite/` dir as `PLAN.md` and `AGENT_PROMPT.md` (not in the repo).
+
 ## Structure
 
 - `_config.yml` — site config. Holds `title`, `description`, and social link
