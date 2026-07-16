@@ -5,21 +5,68 @@ title: Home
 
 <header class="masthead">
   <h1>{{ site.title }}</h1>
-  <p class="tagline">{{ site.description }}</p>
-  <!-- Intro line: edit this to say who you are in a sentence. -->
   <p class="intro">
-    I work on machine learning and robotics. Here I write up experiments and
-    notes as I figure things out. Code is on
-    <a href="https://github.com/{{ site.github }}">GitHub</a>.
+    I'm Rohin. I work on training models, agents and robots.
+  </p>
+  <p class="intro">
+    I'm an ML Research Engineer at <a href="https://scale.com">Scale AI</a>,
+    where I fine-tune vision-language-action models for robot manipulation and
+    train LLM agents with reinforcement learning. I've worked on generative
+    driving models for self-driving cars at
+    <a href="https://www.getcruise.com">Cruise</a> and autonomous-vehicle
+    perception and 3D scene mapping at UCSD's
+    <a href="https://contextualrobotics.ucsd.edu">Contextual Robotics Institute</a>,
+    and spent a summer at
+    <a href="https://research.adobe.com/research/artificial-intelligence-machine-learning/">Adobe Research</a>.
+  </p>
+  <p class="intro">
+    I write up experiments, failures and notes as I work through problems.
+    Reach out!
   </p>
 </header>
 
-<h2 class="section-heading">Writing</h2>
-<ul class="post-list">
-  {% for post in site.posts %}
-  <li>
-    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+<h2 class="section-heading">Selected work</h2>
+<ul class="work-list">
+  <li class="work">
+    <div class="work-head">
+      <a class="work-title" href="https://arxiv.org/abs/2604.20763">Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation</a>
+      <span class="work-year">2026</span>
+    </div>
+    <p class="work-venue">ICML 2026</p>
   </li>
-  {% endfor %}
+  <li class="work">
+    <div class="work-head">
+      <a class="work-title" href="{{ '/2026/02/22/reward-hacking.html' | relative_url }}">Reward Hacking in RL Fine-Tuning of Foundation Models</a>
+      <span class="work-year">2026</span>
+    </div>
+    <p class="work-venue">Blog</p>
+  </li>
+  <li class="work">
+    <div class="work-head">
+      <a class="work-title" href="https://aclanthology.org/2026.loresmt-1.14/">Can Linguistically Related Languages Guide LLM Translation in Low-Resource Settings?</a>
+      <span class="work-year">2026</span>
+    </div>
+    <p class="work-venue">LoResMT @ EACL 2026</p>
+  </li>
+  <li class="work">
+    <div class="work-head">
+      <a class="work-title" href="https://arxiv.org/abs/2112.14406">Overcoming Mode Collapse in Generative AI by Adaptive Multi-Adversarial Training</a>
+      <span class="work-year">2021</span>
+    </div>
+    <p class="work-venue">BMVC 2021</p>
+  </li>
+  <li class="work">
+    <div class="work-head">
+      <a class="work-title" href="https://www.youtube.com/watch?v=8bL3VFsZubM">A Synthetic Data Petri Dish for Studying Mode Collapse in GANs</a>
+      <span class="work-year">2020</span>
+    </div>
+    <p class="work-venue">BayLearn 2020</p>
+  </li>
+  <li class="work">
+    <div class="work-head">
+      <a class="work-title" href="https://dl.acm.org/doi/10.1145/3383313.3412255">Goal-driven Command Recommendations for Analysts</a>
+      <span class="work-year">2020</span>
+    </div>
+    <p class="work-venue">Oral, ACM RecSys 2020</p>
+  </li>
 </ul>

@@ -183,6 +183,40 @@ blockquote {
   flex-shrink: 0;
 }
 
+/* Selected work (home) */
+.work-list {
+  list-style: none;
+  padding: 0;
+}
+
+.work {
+  margin-bottom: 1.1rem;
+}
+
+.work-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.work-title {
+  font-weight: 500;
+}
+
+.work-year {
+  color: #999;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.work-venue {
+  margin: 0.1rem 0 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
 /* Projects */
 .project-list {
   list-style: none;
