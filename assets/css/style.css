@@ -183,6 +183,23 @@ blockquote {
   flex-shrink: 0;
 }
 
+/* Intro social row (home) */
+.intro-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.75rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.intro-social a {
+  color: #777;
+}
+
+.intro-social a:hover {
+  color: #333;
+}
+
 /* Selected work (home) */
 .work-list {
   list-style: none;

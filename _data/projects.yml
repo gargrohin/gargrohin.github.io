@@ -1,30 +1,80 @@
-# Add a project by copying a block below. Fields:
-#   name        (required): project title
-#   description (required): one or two sentences
-#   repo        (optional): GitHub URL
-#   link        (optional): demo / paper / post URL
+# Projects page content, rendered by projects.html.
+# Top level is a list of groups; each group has a `group` title and `items`.
+# Item fields:
+#   name        (required): title
+#   description (optional): one line
+#   repo        (optional): GitHub URL -> shows a "Code" link
+#   link        (optional): paper / demo / post URL
 #   link_label  (optional): text for `link` (defaults to "Link")
 #   year        (optional): shown on the right
-#   tags        (optional): list of short labels
+#   tags        (optional): list of short labels (venue, tech, etc.)
 
-- name: "robotics-rl"
-  description: >
-    DIY robotics training experiments from scratch. PPO on a Robosuite Panda
-    arm, with reward shaping and a notebook for visualizing the reward
-    landscape. See the reward-hacking writeup for what broke and why.
-  repo: "https://github.com/gargrohin/robotics-rl"
-  link: "/2026/02/22/reward-hacking.html"
-  link_label: "Read the post"
-  year: 2026
-  tags: [RL, robotics, PPO]
+- group: Papers
+  items:
+    - name: "Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation"
+      description: >
+        Semantic stratification for retrieval evaluation, giving coverage
+        guarantees and visibility into RAG retrieval failure modes.
+      link: "https://arxiv.org/abs/2604.20763"
+      link_label: "Paper"
+      year: 2026
+      tags: [ICML 2026]
 
-- name: "reinforce"
-  description: >
-    REINFORCE from scratch fine-tuning a nanoGPT-style model for
-    sentiment-controlled text generation, with a KL penalty to keep it from
-    reward-hacking the sentiment classifier.
-  repo: "https://github.com/gargrohin/reinforce"
-  link: "/2026/02/22/reward-hacking.html"
-  link_label: "Read the post"
-  year: 2026
-  tags: [RL, LLM, REINFORCE]
+    - name: "Can Linguistically Related Languages Guide LLM Translation in Low-Resource Settings?"
+      description: >
+        Using linguistically related higher-resource languages to guide LLM
+        translation for low-resource languages.
+      link: "https://aclanthology.org/2026.loresmt-1.14/"
+      link_label: "Paper"
+      year: 2026
+      tags: [LoResMT @ EACL 2026]
+
+    - name: "Overcoming Mode Collapse in Generative AI by Adaptive Multi-Adversarial Training"
+      description: >
+        Adaptive multi-adversarial training that alleviates mode collapse in
+        GANs caused by catastrophic forgetting.
+      repo: "https://github.com/gargrohin/AMAT"
+      link: "https://arxiv.org/abs/2112.14406"
+      link_label: "Paper"
+      year: 2021
+      tags: [BMVC 2021]
+
+    - name: "A Synthetic Data Petri Dish for Studying Mode Collapse in GANs"
+      description: >
+        A controlled synthetic testbed for isolating and studying mode collapse
+        in generative models.
+      link: "https://www.youtube.com/watch?v=8bL3VFsZubM"
+      link_label: "Talk"
+      year: 2020
+      tags: [BayLearn 2020]
+
+    - name: "Goal-driven Command Recommendations for Analysts"
+      description: >
+        Intent-aware recommendations that guide a user toward a long-term goal
+        from raw click-stream data.
+      link: "https://dl.acm.org/doi/10.1145/3383313.3412255"
+      link_label: "Paper"
+      year: 2020
+      tags: [Oral, ACM RecSys 2020]
+
+- group: Code & projects
+  items:
+    - name: "robotics-rl"
+      description: >
+        PPO manipulation experiments in Robosuite/MuJoCo for cube lifting, and
+        debugging the reward-hacking failure modes that come with them.
+      repo: "https://github.com/gargrohin/robotics-rl"
+      link: "/2026/02/22/reward-hacking.html"
+      link_label: "Read the post"
+      year: 2026
+      tags: [RL, robotics, PPO]
+
+    - name: "reinforce"
+      description: >
+        REINFORCE from scratch fine-tuning a nanoGPT-style model for
+        sentiment-controlled generation, with a KL penalty against reward hacking.
+      repo: "https://github.com/gargrohin/reinforce"
+      link: "/2026/02/22/reward-hacking.html"
+      link_label: "Read the post"
+      year: 2026
+      tags: [RL, LLM, REINFORCE]

@@ -7,28 +7,33 @@ permalink: /projects/
 <header class="masthead">
   <h1>Projects</h1>
   <p class="intro">
-    Things I've built. More on
+    Papers, code, and things I've built. More on
     <a href="https://github.com/{{ site.github }}">GitHub</a>.
   </p>
 </header>
 
+{% for group in site.data.projects %}
+<h2 class="section-heading">{{ group.group }}</h2>
 <ul class="project-list">
-  {% for p in site.data.projects %}
+  {% for p in group.items %}
   <li class="project">
     <div class="project-head">
-      <h2 class="project-name">{{ p.name }}</h2>
+      <h3 class="project-name">{{ p.name }}</h3>
       {% if p.year %}<span class="project-year">{{ p.year }}</span>{% endif %}
     </div>
-    <p class="project-desc">{{ p.description }}</p>
+    {% if p.description %}<p class="project-desc">{{ p.description }}</p>{% endif %}
     {% if p.tags %}
     <p class="project-tags">
       {% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}
     </p>
     {% endif %}
+    {% if p.repo or p.link %}
     <p class="project-links">
       {% if p.repo %}<a href="{{ p.repo }}">Code</a>{% endif %}
       {% if p.link %}<a href="{{ p.link | relative_url }}">{{ p.link_label | default: "Link" }}</a>{% endif %}
     </p>
+    {% endif %}
   </li>
   {% endfor %}
 </ul>
+{% endfor %}
