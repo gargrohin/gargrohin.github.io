@@ -13,10 +13,11 @@ site deploys from the **`master`** branch. Pushing to `master` publishes.
 The site's look is modeled on a few minimal personal blogs. Use these when
 adjusting layout, typography, or spacing:
 
-- **evjang.com** — primary style inspiration (also a Jekyll + GitHub Pages
-  site). Referenced by URL; not mirrored locally.
-- **rajan.sh** — style reference. Local mirror downloaded for offline reference.
-- **ericyuegu.com** — style reference. Local mirror downloaded for offline
+- **evjang.com**: primary style inspiration (also a Jekyll + GitHub Pages
+  site). Referenced by URL, not mirrored locally.
+- **rajan.sh**: inspiration for the home page layout (intro paragraphs plus a
+  "Selected work" list). Local mirror downloaded for offline reference.
+- **ericyuegu.com**: style reference. Local mirror downloaded for offline
   reference.
 
 The two local mirrors live **outside this repo** at `../downloaded_blogs/`
@@ -27,17 +28,16 @@ the parent `blogsite/` dir as `PLAN.md` and `AGENT_PROMPT.md` (not in the repo).
 ## Structure
 
 - `_config.yml` — site config. Holds `title`, `description`, and social link
-  vars (`github`, `email`, `linkedin`, `twitter`, `scholar`). Empty social
+  vars (`github`, `email`, `linkedin`, `scholar`). Empty social
   vars are hidden in the footer.
 - `_layouts/default.html` — base layout (nav, `{{ content }}`, footer, and a
   script that opens external links in a new tab).
 - `_layouts/post.html` — blog post layout.
 - `_includes/head.html` — `<head>`: meta, CSS, KaTeX for math.
 - `_includes/footer.html` — social links, driven by `_config.yml` vars.
-- `index.html` — home: masthead/intro + post list.
+- `index.html` — home: intro (bio) plus a hand-written "Selected work" list.
 - `writing.html` — `/writing/`, the blog archive.
 - `projects.html` — `/projects/`, renders `_data/projects.yml`.
-- `about.md` — `/about/`.
 - `_data/projects.yml` — project entries (see the header comment for fields).
 - `_posts/` — blog posts, named `YYYY-MM-DD-slug.md`.
 - `assets/css/style.css` — all site styling. `syntax.css` is Rouge highlighting.
